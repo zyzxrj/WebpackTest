@@ -9,6 +9,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+// 清除上次打包文件
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
 
@@ -87,6 +89,9 @@ module.exports = {
             filename: devMode ? 'css/[name].css' : 'css/[name].[hash].css',
             chunkFilename: devMode ? 'css/[id].css' : 'css/[id].[hash].css',
         }),
+        // 压缩css文件
         new OptimizeCSSAssetsPlugin({}),
+        new CleanWebpackPlugin(),   //参数是一个数组，数组中是需要删除的目录名
+
     ]
 }  
