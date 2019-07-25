@@ -1,0 +1,42 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.16.0/libexec/bin/yarn.js add webpack-dev-server -D
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mac/.rvm/bin:/usr/local/MongoDB/bin:/Users/mac/.rvm/bin:/usr/local/MongoDB/bin
+
+Yarn version: 
+  1.16.0
+
+Node version: 
+  10.15.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: EINVAL: invalid argument, unlink '/Users/mac/Documents/test/H5/webpackTest/node_modules/webpack-dev-server/node_modules/debug'
+
+npm manifest: 
+  {
+    "name": "webpacktest",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "dev": "webpack --mode development"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "webpack": "^4.36.1",
+      "webpack-cli": "^3.3.6",
+      "webpack-dev-server": "^3.7.2"
+    },
+    "dependencies": {}
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
